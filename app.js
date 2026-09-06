@@ -98,4 +98,5 @@ document.getElementById("checkoutForm").addEventListener("submit",e=>{
 });
 function finishOrder(){document.getElementById("checkoutModal").classList.remove("show");closeCart();location.reload();}
 document.getElementById("searchBtn").onclick=()=>{const q=prompt("Search Aneezay's collection");if(!q)return;const found=products.filter(p=>(p.name+" "+p.category).toLowerCase().includes(q.toLowerCase()));alert(found.length?found.map(p=>p.name+" — "+money(p.price)).join("\n"):"No pieces found.");};
+console.log("CART SYSTEM LOADED");
 renderProducts();renderCart();
